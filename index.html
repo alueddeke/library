@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Society</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page" id="page">
+      <header>
+        <div class="header-title">
+          <div class="title"><h1>Library Society</h1></div>
+          <div class="slogan">
+            <p>A book a day...is hard to do</p>
+          </div>
+        </div>
+        <div class="add">
+          <p>Add to the collection here:</p>
+          <button class="btn" id="add-button">+</button>
+        </div>
+      </header>
+      <div class="content">
+        <form class="book-form" style="display: none" id="book-form">
+          <h3>Add new book</h3>
+          <input
+            class="input"
+            type="text"
+            id="title"
+            placeholder="title"
+            required
+            maxlength="100"
+          />
+          <input
+            class="input"
+            type="text"
+            id="author"
+            placeholder="Author"
+            required
+            maxlength="100"
+          />
+          <input
+            class="input"
+            type="number"
+            id="pages"
+            placeholder="Page Count"
+            required
+            maxlength="10000"
+          />
+
+          <label for="read">Have you read it yet?</label>
+          <input type="checkbox" id="read" check="true" />
+
+          <button class="btn" id="submit">Submit</button>
+        </form>
+        <div id="library"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

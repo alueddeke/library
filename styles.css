@@ -1,0 +1,187 @@
+:root {
+  --border-radius: 8px;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --container-width: 1200px;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* --text: #170132;
+  --background: #e9d7fe;
+  --primary-button: #a3fc36;
+  --secondary-button: #f9f5ff;
+  --accent: #a3fc36; */
+
+  --text: #070d09;
+  --background: #e2eee6;
+  --primary-button: #73b088;
+  --secondary-button: #ffffff;
+  --accent: #62a77a;
+  /* https://realtimecolors.com/?colors=070d09-e2eee6-73b088-eff6f1-62a77a 
+  other options
+  --text: #070d09;
+--background: #e2eee6;
+--primary-button: #73b088;
+--secondary-button: #eff6f1;
+--accent: #62a77a;
+  */
+}
+/* RESET   */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #070d09;
+}
+.page {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+  background-color: var(--background);
+  color: #170132;
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  background-color: var(--primary-button);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+#submit {
+  width: 4rem;
+}
+
+#add-button {
+  border-radius: 50%;
+  width: 1.5rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.add {
+  padding-bottom: 5px;
+}
+header {
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: auto auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 20px;
+  background-color: #f7fcf9;
+}
+
+.header-title {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-title p {
+  margin-top: 5px;
+}
+
+.add {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.main {
+  display: flex;
+}
+
+.content {
+  position: relative;
+  /* grid-row: 2/3;
+  display: grid; */
+}
+
+#library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+  margin: var(--spacing-xl);
+}
+
+/* add index to put this on top of grid? */
+.book-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0 9999px #565656b0;
+  background-color: #eff6f1;
+  border: solid var(--text);
+  border-width: 1px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  align-items: flex-start;
+  padding-left: 12px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  background-color: #eff6f1;
+}
+.book-card h3 {
+  padding-top: 5px;
+}
+
+.readBtn {
+  margin-right: 10px;
+  height: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.notreadBtn {
+  background-color: #ff545c;
+  height: 25px;
+  font-size: 13px;
+  width: 8rem;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+#remove {
+  background-color: #a3a2a2;
+  width: 3.7rem;
+  height: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: ;
+}
+
+#remove:hover {
+  background-color: #fd6169;
+}
+
+.readBtns {
+  padding-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  cursor: text;
+}
